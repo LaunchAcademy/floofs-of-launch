@@ -13,6 +13,13 @@ const animals = {
       name: "Miss Islay Mae Arrington",
       image: "https://i.imgur.com/pxG7sIa.png",
       human: "AmyLynn"
+    },
+    {
+      id: 3,
+      breed: "Golden Retriever",
+      name: "Cooper",
+      image: "https://imgur.com/FBcGdUn",
+      human: "Nick"
     }
   ],
   cats: [
