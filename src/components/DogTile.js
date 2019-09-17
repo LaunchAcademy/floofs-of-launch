@@ -9,7 +9,7 @@ const DogTile = (props) => {
   }
 
   return(
-    <div className="tile">
+    <div className="tile" onClick={props.clickCallbackFunction}>
       <h4> {props.dogData.name} </h4>
       <p> {props.dogData.breed} </p>
       <p> {props.dogData.human} </p>

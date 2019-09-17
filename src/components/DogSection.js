@@ -5,10 +5,16 @@ import DogTile from "./DogTile"
 const DogSection = (props) => {
 
   const dogComponents = props.dogs.map((dogInfo) => {
+
+    const dogClickAlertFunction = (event) => {
+      alert(`${dogInfo.human}: ${dogInfo.name}`)
+    }
+
     return(
       <DogTile
         key={dogInfo.id}
         dogData={dogInfo}
+        clickCallbackFunction={dogClickAlertFunction}
       />
     )
   })
