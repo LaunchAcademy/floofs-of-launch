@@ -1,31 +1,14 @@
-import React from 'react';
-
-import DogTile from "./DogTile"
-import DogSection from "./DogSection"
-import CatSection from "./CatSection"
+import React from "react";
+import FloofSection from "./FloofSection";
 
 const App = props => {
-  // debugger
-
-  const evilClickAlert = (event) => {
-    debugger
-    alert("I am evil...oh so evil....")
-  }
-  return(
-    <div className="app">
-      <h1>Place Fluffballs here</h1>
-
-      <DogSection
-        dogs={props.animals.dogs}
-      />
-
-      <CatSection
-        cats={props.animals.cats}
-      />
-
-      <button className="button evil" onClick={evilClickAlert}> EVIL BUTTON </button>
+  return (
+    <div>
+      <h1> Floofs of Launch </h1>
+      <FloofSection floofs={props.animals.dogs} floofType="Dog" />
+      <FloofSection floofs={props.animals.cats} floofType="Cat" />
     </div>
-  )
-}
+  );
+};
 
 export default App;
