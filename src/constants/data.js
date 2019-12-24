@@ -18,7 +18,7 @@ const animals = {
       id: 3,
       breed: "Golden Retriever",
       name: "Cooper",
-      image: "https://imgur.com/FBcGdUn",
+      image: "https://imgur.com/FBcGdUn.jpg",
       human: "Nick"
     }
   ],
