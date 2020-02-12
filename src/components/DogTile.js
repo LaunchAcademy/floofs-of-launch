@@ -1,20 +1,19 @@
 import React from "react"
 
 const DogTile = (props) => {
-  // debugger
   let shameStatus
 
-  if (props.dogData.human === "Nick"){
+  if (props.dog.human === "Nick"){
     shameStatus = <p className="shame"> SHAME! SHAME! *BELL RING* </p>
   }
 
   return(
     <div className="tile" onClick={props.clickCallbackFunction}>
-      <h4> {props.dogData.name} </h4>
-      <p> {props.dogData.breed} </p>
-      <p> {props.dogData.human} </p>
+      <h4> {props.dog.name} </h4>
+      <p> {props.dog.breed} </p>
+      <p> {props.dog.human} </p>
       {shameStatus}
-      <img src={props.dogData.image} width="300"/>
+      <img src={props.dog.image} width="300"/>
     </div>
   )
 }

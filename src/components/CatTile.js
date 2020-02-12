@@ -5,10 +5,10 @@ const CatTile = (props) => {
 
   return(
     <div className="tile">
-      <h4> {props.catData.name} </h4>
-      <p> {props.catData.personality} </p>
-      <p> {props.catData.human}</p>
-      <img src={props.catData.image} />
+      <h4> {props.cat.name} </h4>
+      <p> {props.cat.personality} </p>
+      <p> {props.cat.human}</p>
+      <img src={props.cat.image} />
     </div>
   )
 }
