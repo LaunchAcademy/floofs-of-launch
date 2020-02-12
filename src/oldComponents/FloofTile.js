@@ -22,3 +22,13 @@ const FloofTile = props => {
 };
 
 export default FloofTile;
+
+
+//
+// let setSelectedCatIdClosure = (event) => {
+//   if(selectedCatId == event.currentTarget.id) {
+//     setSelectedCatId(null)}
+//   else {
+//     setSelectedCatId(event.currentTarget.id)
+//   }
+// }
