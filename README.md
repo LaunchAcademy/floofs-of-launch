@@ -15,3 +15,11 @@ To get set up, run the following:
   yarn start
 ```
 and navigate to `localhost:8080`
+
+### Refactor with .map
+<!-- - refactor the cat component -->
+<!-- - make a pet section -->
+<!-- - add the if logic i missed -->
+<!-- - event listener on dogs to say they are clicked
+- update to say the dogs name and a phrase -->
+<!-- - maybe add if logic inside of a function (time permitting) -->
