@@ -1,25 +1,25 @@
 import React from "react"
 
-import DogTile from "./DogTile" 
+import DogTile from "./DogTile.jsx" 
 
 const DogSection = (props) => {
-  
-  const dogs = props.dogs 
+
+  const dogComponents = props.dogs.map((dogObject) => {
+    
+    return(
+      <DogTile
+        key={dogObject.id}
+        dogObjectData={dogObject}
+      />
+    )
+  })
+
 
   return(
-    <div className="container"> 
-      <DogTile
-        dogObjectData={dogs[0]}
-      />
-      <DogTile
-        dogObjectData={dogs[1]}
-      />
-      <DogTile
-        dogObjectData={dogs[2]}
-      />
+    <div className="container">
+      {dogComponents}
     </div>
   )
 }
 
 export default DogSection
-
