@@ -8,8 +8,13 @@ const FloofTile = props => {
     details = props.floof.personality;
   }
 
+  let classes = "tile "
+  if (props.selected) {
+    classes += "bestest-floof"
+  }
+
   return (
-    <div className="tile">
+    <div className={classes} onClick={props.handleClick}>
       <h3>
         {props.floof.name} ({props.floof.human})
       </h3>

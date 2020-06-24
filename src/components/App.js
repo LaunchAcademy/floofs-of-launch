@@ -2,6 +2,7 @@ import React from "react";
 import FloofSection from "./FloofSection";
 
 const App = props => {
+  // debugger
   return (
     <div>
       <h1> Floofs of Launch </h1>
