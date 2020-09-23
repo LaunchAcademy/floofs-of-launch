@@ -1,6 +1,7 @@
 import React from "react";
 
-const FloofTile = props => {
+const FloofTile = (props) => {
+  // debugger;
   let details = "";
   if (props.floof.breed) {
     details = props.floof.breed;
@@ -8,8 +9,13 @@ const FloofTile = props => {
     details = props.floof.personality;
   }
 
+  let classes = "tile";
+  if (props.selectedStatus === true) {
+    classes += " bestest-floof";
+  }
+
   return (
-    <div className="tile">
+    <div className={classes} onClick={props.handleClick}>
       <h3>
         {props.floof.name} ({props.floof.human})
       </h3>

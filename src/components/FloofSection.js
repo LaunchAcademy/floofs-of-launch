@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import FloofTile from "./FloofTile";
 
-const FloofSection = props => {
-  let floofs = props.floofs.map(floof => {
-    return(
+const FloofSection = (props) => {
+  const [favoriteFloofId, setFavoriteFloofId] = useState(null);
+
+  let floofs = props.floofs.map((floof) => {
+    let selectedStatus = false;
+    if (favoriteFloofId === floof.id) {
+      selectedStatus = true;
+    }
+
+    const handleClick = () => {
+      if (selectedStatus === false) {
+        setFavoriteFloofId(floof.id);
+      } else {
+        setFavoriteFloofId(null);
+      }
+    };
+
+    return (
       <FloofTile
         key={floof.id}
         floof={floof}
+        handleClick={handleClick}
+        selectedStatus={selectedStatus}
       />
-    )
+    );
   });
 
   return (
