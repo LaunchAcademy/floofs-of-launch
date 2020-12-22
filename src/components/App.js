@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react"
 
 import CatTile from "./CatTile"
 import DogTile from "./DogTile"
@@ -8,17 +8,13 @@ import DogSection from "./DogSection"
 const App = (props) => {
   // debugger
 
-  return(
+  return (
     <div>
-      <CatSection 
-        cats={props.animals.cats}
-      />
+      <CatSection cats={props.animals.cats} />
 
-      <DogSection 
-        dogs={props.animals.dogs}
-      />
+      <DogSection dogs={props.animals.dogs} />
     </div>
   )
 }
 
-export default App;
+export default App

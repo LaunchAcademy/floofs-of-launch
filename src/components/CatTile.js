@@ -3,8 +3,8 @@ import React from "react"
 const CatTile = (props) => {
   // debugger
 
-  return(
-    <div>
+  return (
+    <div className="tile">
       <h1>{props.catData.name}</h1>
       <p>{props.catData.human}</p>
       <p>{props.catData.personality}</p>
