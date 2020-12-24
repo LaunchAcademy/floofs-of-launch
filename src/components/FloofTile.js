@@ -1,15 +1,20 @@
-import React from "react";
+import React from "react"
 
-const FloofTile = props => {
-  let details = "";
+const FloofTile = (props) => {
+  let details = ""
   if (props.floof.breed) {
-    details = props.floof.breed;
+    details = props.floof.breed
   } else {
-    details = props.floof.personality;
+    details = props.floof.personality
+  }
+
+  let styles = "tile"
+  if (props.selectedStatus) {
+    styles += " bestest-floof"
   }
 
   return (
-    <div className="tile">
+    <div className={styles} onClick={props.handleClick}>
       <h3>
         {props.floof.name} ({props.floof.human})
       </h3>
@@ -18,7 +23,7 @@ const FloofTile = props => {
       </p>
       <img src={props.floof.image} />
     </div>
-  );
-};
+  )
+}
 
-export default FloofTile;
+export default FloofTile
