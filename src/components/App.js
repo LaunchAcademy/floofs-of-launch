@@ -1,8 +1,18 @@
 import React from 'react';
 
-const App = props => {
+import DogSection from "./DogSection"
+import CatTile from "./CatTile"
+
+const App = (props) => {
+// debugger
   return(
-    <h1>Place Fluffballs here</h1>
+    <div>
+      <DogSection dogsArray={props.animals.dogs} />
+      <CatTile cats={props.animals.cats[0]} />
+      <CatTile cats={props.animals.cats[1]} />
+      <CatTile cats={props.animals.cats[2]} />
+      <CatTile cats={props.animals.cats[3]} />
+    </div>
   )
 }
 
