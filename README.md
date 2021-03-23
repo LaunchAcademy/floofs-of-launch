@@ -15,3 +15,11 @@ To get set up, run the following:
   yarn start
 ```
 and navigate to `localhost:8080`
+
+
+Notes 
+- review what currently exists
+- diagram it out 
+- refactor cats with map 
+- dive into events with alert 
+- if time: tease state
