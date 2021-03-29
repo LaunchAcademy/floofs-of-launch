@@ -1,9 +1,15 @@
-import React from 'react';
+import React from "react"
 
-const App = props => {
-  return(
-    <h1>Place Fluffballs here</h1>
+import CatSection from "./CatSection"
+import DogSection from "./DogSection"
+
+const App = (props) => {
+  return (
+    <div className="app">
+      <DogSection dogs={props.data.dogs} />
+      <CatSection cats={props.data.cats} />
+    </div>
   )
 }
 
-export default App;
+export default App
