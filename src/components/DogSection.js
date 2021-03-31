@@ -7,7 +7,11 @@ const DogSection = (props) => {
     return <DogTile key={dog.id} dogData={dog} />
   })
 
-  return dogComponents
+  return(
+    <div className="container">
+      {dogComponents}
+    </div>
+  )
 }
 
 export default DogSection
