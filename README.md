@@ -15,3 +15,9 @@ To get set up, run the following:
   yarn start
 ```
 and navigate to `localhost:8080`
+
+### Bonus: Simple State Overview 
+
+* hugCounter on the teddyBear component 
+* conditional rendering of teddyChinchilla
+* contrive a closure that holds on to a variable value, but the value changes after the function has been declared.
