@@ -3,15 +3,17 @@ import React from 'react';
 import DogSection from "./DogSection"
 import CatTile from "./CatTile"
 
+import CatSection from "./CatSection"
+
 const App = (props) => {
-// debugger
+  // debugger
+
   return(
-    <div>
+    <div className="app">
       <DogSection dogsArray={props.animals.dogs} />
-      <CatTile cats={props.animals.cats[0]} />
-      <CatTile cats={props.animals.cats[1]} />
-      <CatTile cats={props.animals.cats[2]} />
-      <CatTile cats={props.animals.cats[3]} />
+
+      <CatSection cats={props.animals.cats}/>
+
     </div>
   )
 }

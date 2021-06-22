@@ -1,16 +1,26 @@
 import React from 'react'
 
 const CatTile = (props) => {
-// debugger
+
+  const meowFunction = () => {
+    if (props.catData.human === "Casi"){
+      alert("FEED ME MATHER")
+    } else {
+      alert("meow")
+    }
+  }
+
   return (
-    <div>
-      <h1>{props.cats.name}</h1>
-      <p>{props.cats.personality}</p>
-      <p>{props.cats.human}</p>
-      <img src={props.cats.image} width="200px" />
+    <div className="tile">
+      <h1>{props.catData.name}</h1>
+      <p>Personality: {props.catData.personality}</p>
+      <p>Human: {props.catData.human}</p>
+      <img width="250" src={props.catData.image} onClick={meowFunction}/>
     </div>
   )
 
 }
 
 export default CatTile
+
+// object destructuring props
