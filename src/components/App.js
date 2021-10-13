@@ -1,21 +1,19 @@
 import React from 'react';
 
 import DogSection from "./DogSection"
-import CatTile from "./CatTile"
+// import CatTile from "./CatTile"
 
-import CatSection from "./CatSection"
+// import CatSection from "./CatSection"
 
 const App = (props) => {
-  // debugger
 
   return(
     <div className="app">
-      <DogSection dogsArray={props.animals.dogs} />
-
-      <CatSection cats={props.animals.cats}/>
-
+      <DogSection dogsArray={props.animalPropData.dogs} />
     </div>
   )
 }
 
 export default App;
+
+{/* <CatSection cats={props.animals.cats}/> */}
