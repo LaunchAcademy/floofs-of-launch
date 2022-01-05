@@ -7,6 +7,10 @@ Bonus: You should edit the `CatSection` and `DogSection` to `map` over the `data
 
 Bonus refactor: create one `AnimalContainer` that renders both `CatTile`s and `DogTile`s.
 
+### State 
+
+
+
 ## Setup
 To get set up, run the following:
 
