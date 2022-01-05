@@ -2,19 +2,21 @@ import React from "react"
 
 const ChinchillaComponent = (props) => {
 
-  let chinchillaImage
-
+  let chinchillaElement = null
   if (props.chinchillaVisibility === true) {
-    chinchillaImage =
-      <img
-        src="https://d2h1pu99sxkfvn.cloudfront.net/b0/14797159/530976365_gNdlt9yw5E/P0.jpg"
-      />
+    chinchillaElement = <img
+      src="https://4.bp.blogspot.com/-9TSGZyRfGOo/UdzF-ATNl6I/AAAAAAAAD0Y/V7r3PoHAV8k/s400/Funny-chinchilla-Animal.jpg"
+    />
   }
+
   return(
     <div>
-      <h2 onClick={props.clickChinchilla}>Toggle Chinchilla</h2>
+      {chinchillaElement}
 
-      {chinchillaImage}
+      <button onClick={props.chinchillaToggle}>
+        Abra-kadabra
+      </button>
+
     </div>
   )
 }

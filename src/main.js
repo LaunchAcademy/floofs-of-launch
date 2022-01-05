@@ -5,9 +5,10 @@ import ReactDOM from 'react-dom';
 import animals from './constants/data';
 import App from './components/App'
 
-import TeddyBear from './components/TeddyBear'
+import FluffyFriends from './components/FluffyFriends'
 
 ReactDOM.render(
-  <TeddyBear saying="I LOVE YOU" />, document.getElementById('app')
+  <FluffyFriends saying="I LOVE YOU"/>, 
+  document.getElementById('app')
   );
   
