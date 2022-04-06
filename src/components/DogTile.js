@@ -4,9 +4,9 @@ const DogTile = props => {
 
   // const [favoriteStatus, setFavorite] = useState(false)
 
-  // const favoriteDog = () => {
-  //   props.setFavoriteDogId(props.dogId);
-  // }
+  const favoriteDog = () => {
+    props.setFavoriteDogId(props.dogId);
+  }
 
   let favoriteClassName = ""
   if (props.showFavoriteBackground === true){
@@ -14,7 +14,7 @@ const DogTile = props => {
   }
 
     return (
-      <div className={`tile ${favoriteClassName}`} onClick={props.favoriteDog}>
+      <div className={`tile ${favoriteClassName}`} onClick={favoriteDog}>
 
         <h1>{props.dog.name}</h1>
         <p>{props.dog.breed}</p>
