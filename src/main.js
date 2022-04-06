@@ -8,7 +8,7 @@ import App from './components/App'
 import FluffyFriends from './components/FluffyFriends'
 
 ReactDOM.render(
-  <FluffyFriends saying="I LOVE YOU"/>, 
+  <App data={animals}/>, 
   document.getElementById('app')
   );
   

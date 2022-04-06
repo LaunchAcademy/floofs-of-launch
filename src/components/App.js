@@ -1,30 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import DogSection from "./DogSection"
-import CatTile from "./CatTile"
-
-import CatSection from "./CatSection"
+import DogTile from "./DogTile"
 
 const App = (props) => {
-  // debugger
-  const catTiles = props.animals.cats.map((catObject) => {
-    return (
-      <CatTile
-        catData={catObject}
-        key={catObject.id}
-      />
-    )
-  })
 
-  return(
-    <div className="app">
+  const [favoriteDogId, setFavoriteDogId ] = useState(null)
 
-      <div className="container">
-        {catTiles}
-      </div>
+  const favoriteDog = (id) => {
+    setFavoriteDogId(id);
+  }
 
-    </div>
+ const dogsList = props.data.dogs.map((dogObject) => {
+
+  let showFavoriteBackground = false
+  if (favoriteDogId === dogObject.id){
+    showFavoriteBackground = true
+  }
+  
+   return (
+    <DogTile 
+      key={dogObject.id} 
+      favoriteDog={favoriteDog}
+      dog={dogObject} 
+      dogId={dogObject.id}
+      showFavoriteBackground={showFavoriteBackground}
+    />
   )
+ });
+
+  return (
+    <div className="app">
+      <div className="">{dogsList}</div>
+    </div>
+  );
 }
 
 export default App;
