@@ -6,15 +6,17 @@ const App = (props) => {
 
   const [favoriteDogId, setFavoriteDogId ] = useState(null)
 
-  const favoriteDog = (id) => {
-    setFavoriteDogId(id);
-  }
+
 
  const dogsList = props.data.dogs.map((dogObject) => {
 
   let showFavoriteBackground = false
   if (favoriteDogId === dogObject.id){
     showFavoriteBackground = true
+  }
+
+  const favoriteDog = () => {
+    setFavoriteDogId(dogObject.id);
   }
   
    return (

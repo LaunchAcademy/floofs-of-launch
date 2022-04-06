@@ -8,17 +8,13 @@ const DogTile = props => {
   //   props.setFavoriteDogId(props.dogId);
   // }
 
-  const favoriteWrapperFunction = () => {
-    props.favoriteDog(props.dogId)
-  }
-
   let favoriteClassName = ""
   if (props.showFavoriteBackground === true){
     favoriteClassName = "selected"
   }
 
     return (
-      <div className={`tile ${favoriteClassName}`} onClick={favoriteWrapperFunction}>
+      <div className={`tile ${favoriteClassName}`} onClick={props.favoriteDog}>
 
         <h1>{props.dog.name}</h1>
         <p>{props.dog.breed}</p>
