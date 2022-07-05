@@ -1,8 +1,17 @@
 import React from 'react';
 
+import DogTile from "./DogTile"
+import DogSection from "./DogSection"
+
 const App = props => {
+
+
   return(
-    <h1>Place Fluffballs here</h1>
+    <div className="app">
+      <DogSection 
+        arrayOfDogObjects={props.data.dogs}
+      />
+    </div>
   )
 }
 
