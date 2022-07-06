@@ -2,7 +2,6 @@ import React, { useState} from 'react'
 
 const DogTile = props => {
 
-
   let selectedClassName = ""
   if (props.favoriteDogId === props.id){
     selectedClassName = "selected"

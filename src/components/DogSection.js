@@ -6,16 +6,13 @@ const DogSection = props => {
 
     const [favoriteDogId, setFavoriteDogId] = useState(null)
 
-    console.log("Favorite Dog ID:", favoriteDogId)
-
     let secretMessage = null 
     if (favoriteDogId === 3){
         secretMessage = <p> You matter to me (Cooper) </p>
     }
 
-
-
     const dogComponents = props.dogsArray.map((dogObject) => {
+
         return (
             <DogTile
                 key={dogObject.id}
