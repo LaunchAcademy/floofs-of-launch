@@ -3,14 +3,14 @@ const animals = {
     {
       id: 1,
       breed: "pit/lab",
-      name: "Sir Geoffrey Drake Arrington",
+      name: "Geoffrey",
       image: "https://i.imgur.com/Eyw9YNV.png",
       human: "AmyLynn"
     },
     {
       id: 2,
       breed: "ottoman with legs, maybe part hippo",
-      name: "Miss Islay Mae Arrington",
+      name: "Islay Mae",
       image: "https://i.imgur.com/pxG7sIa.png",
       human: "AmyLynn"
     },

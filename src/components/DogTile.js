@@ -2,28 +2,25 @@ import React, { useState} from 'react'
 
 const DogTile = props => {
 
-  // const [favoriteStatus, setFavorite] = useState(false)
 
-  // const favoriteDog = () => {
-  //   props.setFavoriteDogId(props.dogId);
-  // }
-
-  const favoriteWrapperFunction = () => {
-    props.favoriteDog(props.dogId)
+  let selectedClassName = ""
+  if (props.favoriteDogId === props.id){
+    selectedClassName = "selected"
   }
 
-  let favoriteClassName = ""
-  if (props.showFavoriteBackground === true){
-    favoriteClassName = "selected"
+  const favoriteTheDog = () => {
+    props.setFavoriteDogId(props.id)
   }
 
     return (
-      <div className={`tile ${favoriteClassName}`} onClick={favoriteWrapperFunction}>
-
-        <h1>{props.dog.name}</h1>
-        <p>{props.dog.breed}</p>
-        <p>{props.dog.human}</p>
-        <img src={props.dog.image} width="200px" />
+      <div 
+        className={`tile ${selectedClassName}`} 
+        onClick={favoriteTheDog}
+      >
+        <h1>{props.name}</h1>
+        <p>{props.breed}</p>
+        <p>{props.human}</p>
+        <img src={props.image} width="200px" />
       </div>
     );
 }

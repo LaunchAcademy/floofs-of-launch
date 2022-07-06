@@ -1,36 +1,16 @@
 import React, { useState } from 'react';
 
-import DogTile from "./DogTile"
+import DogSection from './DogSection';
+import CatSection from './CatSection';
 
 const App = (props) => {
 
-  const [favoriteDogId, setFavoriteDogId ] = useState(null)
-
-  const favoriteDog = (id) => {
-    setFavoriteDogId(id);
-  }
-
- const dogsList = props.data.dogs.map((dogObject) => {
-
-  let showFavoriteBackground = false
-  if (favoriteDogId === dogObject.id){
-    showFavoriteBackground = true
-  }
-  
-   return (
-    <DogTile 
-      key={dogObject.id} 
-      favoriteDog={favoriteDog}
-      dog={dogObject} 
-      dogId={dogObject.id}
-      showFavoriteBackground={showFavoriteBackground}
-    />
-  )
- });
 
   return (
     <div className="app">
-      <div className="">{dogsList}</div>
+      <DogSection dogsArray={props.data.dogs} />
+
+      <CatSection catsArray={props.data.cats} />
     </div>
   );
 }
