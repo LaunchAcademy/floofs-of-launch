@@ -1,19 +1,24 @@
-import React from "react"
+import React, { useState } from "react"
 
 const ChinchillaComponent = (props) => {
-  let image = (
-    <img src="https://4.bp.blogspot.com/-9TSGZyRfGOo/UdzF-ATNl6I/AAAAAAAAD0Y/V7r3PoHAV8k/s400/Funny-chinchilla-Animal.jpg" />
-  )
+  const [jazzyStatus, setJazzyStatus] = useState(false)
 
-  if (props.showChinchilla === false) {
-    image = ""
+  let chinchillaImage = null
+  if (props.jazzyStatus === true){
+    chinchillaImage = <img src="https://4.bp.blogspot.com/-9TSGZyRfGOo/UdzF-ATNl6I/AAAAAAAAD0Y/V7r3PoHAV8k/s400/Funny-chinchilla-Animal.jpg" />
+  }
+
+  const clickToChangeJazz = () => {
+    props.setJazzyStatus(!props.jazzyStatus)
   }
 
   return (
     <div>
-      {image}
-      
-      <button onClick={props.toggleChinchilla}>Abra-kadabra</button>
+      {chinchillaImage}
+
+      <button onClick={clickToChangeJazz}>
+        TOGGLE JAZZ
+      </button>
     </div>
   )
 }
