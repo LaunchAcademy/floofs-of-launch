@@ -1,29 +1,19 @@
-import React from "react"
+import React, { useState } from "react"
 
-import CatTile from "./CatTile"
+import CatSection from "./CatSection"
 
 // import DogSection from "./DogSection"
 
 const App = (props) => {
-  const catsData = props.data.cats
-  const catsArray = catsData.map((cat) => {
 
-    return (
-      <CatTile
-        name={cat.name}
-        personality={cat.personality}
-        human={cat.human}
-        image={cat.image}
-        key={cat.id}
-        id={cat.id}
-      />
-    )
-  })
+  const catsData = props.data.cats
 
   return (
     <div>
       <h1>Place Fluffballs here</h1>
-      {catsArray}
+      <CatSection 
+        catsData={catsData}
+      />
     </div>
   )
 }

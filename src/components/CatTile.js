@@ -1,17 +1,22 @@
-import React from "react"
+import React, { useState } from "react"
 
 const CatTile = (props) => {
-  // debugger
+
   const handleClick = () => {
-    console.log(`Meow! My name is ${props.name}`)
+    props.changeSelectedCatId(props.id)
+  }
+  
+  let favoriteClass 
+  if (props.id === props.selectedCatId){
+    favoriteClass = "bestest-floof"
   }
 
   return (
-    <div onClick={handleClick} className="callout">
+    <div onClick={handleClick} className={`callout ${favoriteClass}`}>
       <li>{props.name}</li>
       <p>{props.human}</p>
       <p>{props.personality}</p>
-      <img src={props.image} />
+      <img width="300px" src={props.image} />
     </div>
   )
 }
