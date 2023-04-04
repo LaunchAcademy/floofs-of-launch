@@ -1,36 +1,27 @@
 import React from "react"
 
-import CatTile from "./CatTile"
+import DogTile from "./DogTile"
 
 const App = (props) => {
   // debugger
-  const catsData = props.data.cats
-  const catsArray = catsData.map((cat) => {
-    // debugger
-    // <div key={cat.id} className="callout">
-    //   <li>{cat.name}</li>
-    //   <p>{cat.human}</p>
-    //   <p>{cat.personality}</p>
-    // </div>
+  const dogTileComponents = props.animals.dogs.map((dogObject) => {
+
     return (
-      <CatTile
-        name={cat.name}
-        personality={cat.personality}
-        human={cat.human}
-        image={cat.image}
-        // cat={cat}
-        key={cat.id}
-        id={cat.id}
+      <DogTile
+        name={dogObject.name}
+        breed={dogObject.personality}
+        human={dogObject.human}
+        image={dogObject.image}
+        key={dogObject.id}
       />
     )
   })
 
-  // console.log(catsArray)
 
   return (
     <div>
       <h1>Place Fluffballs here</h1>
-      {catsArray}
+      {dogTileComponents}
     </div>
   )
 }
