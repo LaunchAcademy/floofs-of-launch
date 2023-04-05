@@ -4,37 +4,23 @@ import DogTile from "./DogTile"
 
 const App = (props) => {
 
-  const [favoriteDogId, setFavoriteDogId ] = useState(null)
-
-
-
- const dogsList = props.data.dogs.map((dogObject) => {
-
-  let showFavoriteBackground = false
-  if (favoriteDogId === dogObject.id){
-    showFavoriteBackground = true
-  }
-
-  const favoriteDog = () => {
-    setFavoriteDogId(dogObject.id);
-  }
-  
+ const dogTileComponents = props.animals.dogs.map((dogObject) => {
    return (
     <DogTile 
       key={dogObject.id} 
-      favoriteDog={favoriteDog}
-      dog={dogObject} 
-      dogId={dogObject.id}
-      showFavoriteBackground={showFavoriteBackground}
+      dogName={dogObject.name} 
+      breed={dogObject.breed} 
+      human={dogObject.human} 
+      image={dogObject.image} 
     />
   )
  });
 
   return (
     <div className="app">
-      <div className="">{dogsList}</div>
+        {dogTileComponents}
     </div>
-  );
+  )
 }
 
 export default App;

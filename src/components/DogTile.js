@@ -1,27 +1,20 @@
-import React, { useState} from 'react'
+import React from 'react'
 
-const DogTile = props => {
+const DogTile = (props) => {
 
-  // const [favoriteStatus, setFavorite] = useState(false)
-
-  // const favoriteDog = () => {
-  //   props.setFavoriteDogId(props.dogId);
-  // }
-
-  let favoriteClassName = ""
-  if (props.showFavoriteBackground === true){
-    favoriteClassName = "selected"
+  const clickDog = () => {
+    alert(`You hugged: ${props.dogName}`)
   }
 
-    return (
-      <div className={`tile ${favoriteClassName}`} onClick={props.favoriteDog}>
+  return (
+    <div className="tile" onClick={clickDog}>
+      <h3>{props.dogName}</h3>
+      <p>Breed: {props.breed}</p>
+      <p>Human: {props.human}</p>
+      <img width="300" src={props.image}/>
+    </div>
+  )
 
-        <h1>{props.dog.name}</h1>
-        <p>{props.dog.breed}</p>
-        <p>{props.dog.human}</p>
-        <img src={props.dog.image} width="200px" />
-      </div>
-    );
 }
 
 export default DogTile
