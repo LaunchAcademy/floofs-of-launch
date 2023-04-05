@@ -1,24 +1,18 @@
 import React, { useState } from 'react';
 
 import DogTile from "./DogTile"
+import CatSection from "./CatSection"
+import DogSection from './DogSection';
 
 const App = (props) => {
 
- const dogTileComponents = props.animals.dogs.map((dogObject) => {
-   return (
-    <DogTile 
-      key={dogObject.id} 
-      dogName={dogObject.name} 
-      breed={dogObject.breed} 
-      human={dogObject.human} 
-      image={dogObject.image} 
-    />
-  )
- });
+ 
 
   return (
     <div className="app">
-        {dogTileComponents}
+        <DogSection dogs={props.animals.dogs} />
+
+        <CatSection cats={props.animals.cats} />
     </div>
   )
 }
