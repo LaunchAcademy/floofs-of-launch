@@ -1,24 +1,17 @@
 import React, { useState } from 'react';
 
-import DogTile from "./DogTile"
+import DogList from "./DogList"
 
 const App = (props) => {
 
- const dogTileComponents = props.animals.dogs.map((dogObject) => {
-   return (
-    <DogTile 
-      key={dogObject.id} 
-      dogName={dogObject.name} 
-      breed={dogObject.breed} 
-      human={dogObject.human} 
-      image={dogObject.image} 
-    />
-  )
- });
+  const tellNickHowCringeHeIs = () => {
+    alert("you are cringe but we love you")
+  }
 
   return (
     <div className="app">
-        {dogTileComponents}
+      <h1 onClick={tellNickHowCringeHeIs}>Here are Ze Pets</h1>
+      <DogList />
     </div>
   )
 }
