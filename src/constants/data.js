@@ -24,33 +24,33 @@ const animals = {
   ],
   cats: [
     {
-      id: 3,
+      id: 5,
       personality: "has a triangle nose perfect for booping",
       name: "Juliabeast",
       image: "https://i.imgur.com/8PjaghN.jpg",
       human: "Casi"
     },
     {
-      id: 4,
+      id: 8,
       personality: "too smart for her own good",
       name: "Catniss",
       image: "https://i.imgur.com/HY6XJLo.jpg",
       human: "Casi"
     },
     {
-      id: 5,
+      id: 14,
       personality: "likes warming his rear on technology",
       name: "Bingo",
       image: "http://i.imgur.com/ntz2sQe.jpg",
       human: "AmyLynn"
     },
     {
-      id: 6,
-      personality: "likes mobile tech",
-      name: "Storrow",
-      image: "http://i.imgur.com/oSr7eBY.jpg",
-      human: "AmyLynn"
-    }
+      id: 21,
+      personality: "adventurous",
+      name: "Jagr",
+      image: "https://i.imgur.com/hO7LvY3.jpg",
+      human: "Kerrin"
+    },
   ]
 };
 
