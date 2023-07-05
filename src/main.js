@@ -7,13 +7,12 @@ import App from './components/App'
 
 import FluffyFriends from './components/FluffyFriends'
 
-// <App animals={data} />
 
 
 
 
 ReactDOM.render(
-  <FluffyFriends saying={"Hi everyone, I'm Bob. And I need some hugs"} />, 
+  <App petData={data} />,
   document.getElementById('app')
   );
   

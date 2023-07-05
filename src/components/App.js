@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import DogList from "./DogList"
+import CatList from './CatList';
 
 const App = (props) => {
 
@@ -8,10 +9,14 @@ const App = (props) => {
     alert("you are cringe but we love you")
   }
 
+
   return (
     <div className="app">
+
       <h1 onClick={tellNickHowCringeHeIs}>Here are Ze Pets</h1>
-      <DogList />
+
+      <DogList dogObjectArray={props.petData.dogs}/>
+      <CatList cats={props.petData.cats}/>
     </div>
   )
 }
