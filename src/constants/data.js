@@ -28,7 +28,7 @@ const animals = {
       personality: "has a triangle nose perfect for booping",
       name: "Juliabeast",
       image: "https://i.imgur.com/8PjaghN.jpg",
-      human: "Casi"
+      human: "Casi",
     },
     {
       id: 4,
