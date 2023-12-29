@@ -1,18 +1,22 @@
-import React from "react"
+import React, { useState } from "react"
   
 const CatTile = (props) => {
-  // console.log(props)
 
   const handleClick = (event) => {
-    
-    console.log(`${props.catObject.name} got BOOPED`)
+    props.setCatId(props.catObject.id)
   }
+
+  let catFavoriteClassName = ""
+  if (props.favoriteCatId === props.catObject.id) {
+    catFavoriteClassName = "bestest-floof"
+  }
+
   
   return (
-    <div>
+    <div className={`tile ${catFavoriteClassName}`} onClick={handleClick}>
       <h3>{props.catObject.name} owns {props.catObject.human}</h3>
       <p>{props.catObject.personality}</p>
-      <img onClick={handleClick} src={props.catObject.image} />
+      <img src={props.catObject.image} width="200px"/>
     </div>
   )
 }

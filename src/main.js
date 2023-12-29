@@ -6,6 +6,6 @@ import data from './constants/data';
 import App from './components/App'
 
 ReactDOM.render(
-  <App dataFromApp={data}/>, 
+  <App dataFromApp={data} />, 
   document.getElementById('app')
 );

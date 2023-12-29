@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import CatTile from './CatTile';
 
@@ -6,28 +6,24 @@ const App = props => {
   // debugger
   const catsDataArray = props.dataFromApp.cats
 
-  const catList = catsDataArray.map((cat) => {
-    // console.log(cat)
+  const [favoriteCatId, setCatId] = useState(4)
+
+  console.log(favoriteCatId)
+
+  const catList = catsDataArray.map((catObject) => {
     return (
       <CatTile 
-        key={cat.id} 
-        catObject={cat} 
-        // name={cat.name}
-        // personality={cat.personality}
-        // id={cat.id}
+        key={catObject.id} 
+        catObject={catObject} 
+        favoriteCatId={favoriteCatId}
+        setCatId={setCatId}
       />
-      // <div key={cat.id}>
-      //   <h3>{cat.name} owns {cat.human}</h3>
-      //   <p>{cat.personality}</p>
-      //   <img src={cat.image} />
-      // </div>
     )
   })
 
-  console.log(catList)
 
   return(
-    <div>
+    <div className="app">
       <h1>Place Fluffballs here</h1>
       <div>
         {catList}
